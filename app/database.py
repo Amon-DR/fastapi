@@ -8,7 +8,7 @@ from . config import settings
 
 # SQLACHEMY_DATABASE_URL = f"postgresql://{settings.database_username}:{settings.database_password}@{settings.database_hostname}/{settings.database_name}"
 
-SQLACHEMY_DATABASE_URL = f"postgresql://{settings.database_username}:{settings.database_password}@{settings.database_hostname}.${settings.database_name}.app:${settings.database_port}/${settings.database_hostname}"
+SQLACHEMY_DATABASE_URL = settings.database_url
 
 engine = create_engine(SQLACHEMY_DATABASE_URL)
 SessionLocal = sessionmaker(autocommit = False, autoflush=False, bind=engine)
