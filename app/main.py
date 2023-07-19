@@ -16,7 +16,7 @@ app.add_middleware(
     allow_origins = origins,
     allow_credentials = True,
     allow_methods=["*"],
-    allow_header=["*"]
+    allow_headers=["*"]
 )
 # def find_post(id):
 #     for p in my_posts:
